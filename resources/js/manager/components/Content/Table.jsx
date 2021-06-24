@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Table extends React.Component
 {
-    constructor(props) 
+    constructor(props)
     {
         super(props);
 
@@ -18,7 +18,7 @@ class Table extends React.Component
         this.props.prerequisiteCallback();
     }
 
-    handleEdit(e) 
+    handleEdit(e)
     {
         this.props.onEdit(e.target);
     }
@@ -53,7 +53,7 @@ class Table extends React.Component
         return;
     }
 
-    renderItem(item) 
+    renderItem(item)
     {
         let i = 0;
         let output = [];
@@ -75,15 +75,15 @@ class Table extends React.Component
                         data-bs-display="static"
                         aria-expanded="false">
 
-                        <FontAwesomeIcon 
-                            icon={ ["fas", "ellipsis-h"] } 
+                        <FontAwesomeIcon
+                            icon={ ["fas", "ellipsis-h"] }
                             size="1x" />
-                        
+
                     </span>
                     <ul className="dropdown-menu dropdown-menu-lg-end">
                         <li>
-                            <Link 
-                                to={ this.props.indexLink + "/edit/" + item.id }
+                            <Link
+                                to={ this.props.indexLink + "/edits/" + item.id }
                                 className="dropdown-item"
                                 data-id={ item.id }
                                 onClick={ this.props.onEdit }
@@ -101,14 +101,14 @@ class Table extends React.Component
     /*
      * The main method of the object
     */
-    render() 
+    render()
     {
         return (
             <div className="card">
                 <div className="card-body">
-                    <Link 
-                        to="/manager/users/create" 
-                        className="btn btn-sm btn-primary mb-2" 
+                    <Link
+                        to="/manager/users/create"
+                        className="btn btn-sm btn-primary mb-2"
                         title="Add an user"
                     >
                         Create

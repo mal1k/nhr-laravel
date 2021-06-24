@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
-class Navbar extends React.Component 
+class Navbar extends React.Component
 {
     constructor(props)
     {
@@ -42,7 +42,7 @@ class Navbar extends React.Component
         window.removeEventListener("resize", this.handleResize);
     }
 
-    toggleSidebar() 
+    toggleSidebar()
     {
         let body = document.querySelector("body");
         let $classList = body.classList;
@@ -96,7 +96,7 @@ class Navbar extends React.Component
             .catch(error => console.error("There was an error!", error));
     }
 
-    render() 
+    render()
     {
         return (
             <>
@@ -104,7 +104,7 @@ class Navbar extends React.Component
                 <div className="container-fluid">
                     <ul className="navbar-nav">
                         <li className="nav-item">
-                            <a 
+                            <a
                                 className="nav-link"
                                 role="button"
                                 onClick={ this.handleClick }
@@ -114,16 +114,16 @@ class Navbar extends React.Component
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a 
-                                href="/" 
-                                className="nav-link d-none d-md-block" 
+                            <a
+                                href="/"
+                                className="nav-link d-none d-md-block"
                                 target="_blank"
                             >
                                 The website home
                             </a>
-                            <a 
-                                href="/" 
-                                className="nav-link d-md-none" 
+                            <a
+                                href="/"
+                                className="nav-link d-md-none"
                                 target="_blank"
                             >
                                 Website
@@ -137,7 +137,7 @@ class Navbar extends React.Component
                     </ul>
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item">
-                            <a 
+                            <a
                                 onClick={ this.handleLogout }
                                 className="nav-link btn btn-sm btn-outline-light"
                             >
